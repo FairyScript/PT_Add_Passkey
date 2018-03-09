@@ -17,9 +17,9 @@
   &emsp;&emsp;需要注意的是，不同的站点实现的功能不同，对应情况需要作出针对性的修改。
 ## 脚本行为
   &emsp;&emsp;此脚本会修改 \*/torrents.php 以及 \*/details.php内的“下载种子”按钮所指向的地址（形如\*/download.php?id=11111）
-  ![Snipaste_2017-12-19_17-48-38.png](https://i.loli.net/2017/12/19/5a38e0895800f.png)
+  ![38.png](https://i.loli.net/2017/12/19/5a38e0895800f.png)
 
-  ![Snipaste_2017-12-19_17-59-42.png](https://i.loli.net/2017/12/19/5a38e322a4591.png)
+  ![42.png](https://i.loli.net/2017/12/19/5a38e322a4591.png)
 
   并将其修改为\*/download.php?id=11111&passkey=22222的格式。
 ## 注意事项
