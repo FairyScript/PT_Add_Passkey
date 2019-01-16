@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PT站链接补全
-// @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @namespace    https://queb.fun/
+// @version      1.1.1
 // @description  仅适用于NexusPHP站点
 // @author       Iranninn
 // @match        *://u2.dmhy.org/*
@@ -22,7 +22,7 @@
     	]);
     //Extra code
     var patch = new Map([
-    	['u2.dmhy.org',function(state){
+    	['u2.dmhy.org',state => {
     		if(state == 'torrents'){
     			Torrent(pskey);
     		}
@@ -65,19 +65,17 @@
     //FxS
     function Torrent (key) {
     	console.log('Torrent load!');
-        var _key = key;
         var element = document.querySelectorAll("img.download");
             for (var i = element.length - 1; i >= 0; i--) {
                 var out = element[i].parentNode;
-                out.href += _key;
+                out.href += key;
             }
         }
 
     function Detail (key) {
     	console.log('Detail load!');
-        var _key = key;
         var element = document.querySelectorAll("img.dt_download");
         var out = element[0].parentNode;
-        out.href += _key;
+        out.href += key;
         }
 })();
